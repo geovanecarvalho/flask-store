@@ -1,0 +1,12 @@
+[default]
+SECRET_KEY="@jinja {{env.SECRET_KEY}}"
+SQLALCHEMY_TRACK_MODIFICATIONS=false
+
+[development]
+SQLALCHEMY_DATABASE_URI="@jinja {{env.DATABASE_DEV_URI}}"
+
+[production]
+SQLALCHEMY_DATABASE_URI="@jinja {{env.DATABASE_URI}}"
+
+[testing]
+SQLALCHEMY_DATABASE_URI="@jinja {{env.DATABASE_TEST_URI}}"
